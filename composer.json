@@ -1,13 +1,14 @@
 {
     "name": "nunomaduro/laravel-meetups",
     "description": "Console application to check Laravel Meetups near you",
+    "keywords": ["laravel", "laravel-meetups", "php", "console"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Nuno Maduro",
             "email": "enunomaduro@gmail.com"
         }
     ],
-    "type": "console",
     "require": {
         "symfony/console": "^3.1",
         "paquettg/php-html-parser": "^1.7"
