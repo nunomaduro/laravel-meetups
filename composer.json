@@ -16,5 +16,8 @@
         "psr-4": {
             "LaravelMeetups\\": "src/"
         }
-    }
+    },
+    "bin": [
+        "laravel-meetups"
+    ]
 }
