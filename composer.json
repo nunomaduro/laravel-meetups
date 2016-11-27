@@ -1,0 +1,20 @@
+{
+    "name": "nunomaduro/laravel-meetups",
+    "description": "Console application to check Laravel Meetups near you",
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        }
+    ],
+    "type": "console",
+    "require": {
+        "symfony/console": "^3.1",
+        "paquettg/php-html-parser": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelMeetups\\": "src/"
+        }
+    }
+}
