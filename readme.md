@@ -1,5 +1,7 @@
 ## Laravel meetups 
 
+[![Build Status](https://travis-ci.org/nunomaduro/laravel-meetups.svg?branch=master)](https://travis-ci.org/nunomaduro/laravel-meetups)
+
 #### Installation
 
 Make sure you have composer installed globally.
