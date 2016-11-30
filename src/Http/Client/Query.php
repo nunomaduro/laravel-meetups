@@ -27,7 +27,12 @@ class Query implements Contract
      */
     public function toString()
     {
-        return $this->strategy->getUrl()
-            . '/' . http_build_query($this->strategy->getParams());
+        $stringQuery = $this->strategy->getUrl();
+
+        if (! empty($params = $this->strategy->getParams())) {
+            $stringQuery .= '?' . http_build_query($params);
+        }
+
+        return $stringQuery;
     }
 }

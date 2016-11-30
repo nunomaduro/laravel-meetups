@@ -14,6 +14,15 @@ interface Config
     public function setRadius($radius);
 
     /**
+     * Sets the url.
+     *
+     * @param string $url
+     *
+     * @return $this
+     */
+    public function setUrl($url);
+
+    /**
      * Returns the url.
      *
      * @return string
@@ -42,9 +51,16 @@ interface Config
     public function getRadius();
 
     /**
-     * Returns the fields of an event.
+     * Returns the catalog providers of an event.
      *
-     * @return []Fields\Field
+     * @return []Providers
      */
-    public function getElements();
+    public function getCatalogProviders();
+
+    /**
+     * Returns the detail providers of an event.
+     *
+     * @return []Providers
+     */
+    public function getDetailProviders();
 }

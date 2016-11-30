@@ -2,17 +2,16 @@
 
 namespace LaravelMeetups\Http\Client;
 
-use LaravelMeetups\Contracts\Http\Client\Strategy as Contract;
 use LaravelMeetups\Contracts\Config;
 
-class Strategy implements Contract
+abstract class AbstractStrategy
 {
     /**
      * Holds a instance of config.
      *
      * @var Config
      */
-    private $config;
+    protected $config;
 
     /**
      * {@inheritdoc}
@@ -35,10 +34,6 @@ class Strategy implements Contract
      */
     public function getParams()
     {
-        return [
-            'allMeetups' => $this->config->getAllMeetups() ? 'true' : 'false',
-            'keywords' => $this->config->getKeywords(),
-            'radius' => $this->config->getRadius(),
-        ];
+        return [];
     }
 }

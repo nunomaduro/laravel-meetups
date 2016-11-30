@@ -2,18 +2,18 @@
 
 namespace LaravelMeetups\Contracts\Jobs;
 
-use Symfony\Component\Console\Helper\Table;
 use LaravelMeetups\Contracts\Config;
+use Symfony\Component\Console\Style\StyleInterface;
 
 interface Writer
 {
     /**
      * Creates a new instance of the class.
      *
-     * @param Config $config
-     * @param Table  $table
+     * @param Config         $config
+     * @param StyleInterface $io
      */
-    public function __construct(Config $config, Table $table);
+    public function __construct(Config $config, StyleInterface $io);
 
     /**
      * Writes the values on the table.
@@ -23,9 +23,9 @@ interface Writer
     public function setValues(array $values);
 
     /**
-     * Returns the class table.
+     * Writes on console
      *
-     * @return Table
+     * @return $this
      */
-    public function getTable();
+    public function write();
 }

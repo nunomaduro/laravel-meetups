@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelMeetups\Fields;
+namespace LaravelMeetups\Providers\Catalog;
 
 use PHPHtmlParser\Dom;
-use LaravelMeetups\Contracts\Fields\Field as Contract;
+use LaravelMeetups\Contracts\Providers\Provider as Contract;
 
 class Date implements Contract
 {

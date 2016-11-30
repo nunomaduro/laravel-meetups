@@ -1,11 +1,11 @@
 <?php
 
-namespace LaravelMeetups\Fields;
+namespace LaravelMeetups\Providers\Catalog;
 
-use LaravelMeetups\Contracts\Fields\Field;
+use LaravelMeetups\Contracts\Providers\Provider as Contract;
 use PHPHtmlParser\Dom;
 
-class Title implements Field
+class Title implements Contract
 {
     /**
      * {@inheritdoc}

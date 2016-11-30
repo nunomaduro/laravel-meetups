@@ -4,7 +4,7 @@ namespace LaravelMeetups\Contracts\Jobs;
 
 use Symfony\Component\Console\Input\InputInterface;
 use LaravelMeetups\Contracts\Config;
-use PHPHtmlParser\Dom as Analyser;
+use PHPHtmlParser\Dom;
 
 interface Search
 {
@@ -13,14 +13,14 @@ interface Search
      *
      * @param  Config         $config
      * @param  InputInterface $input
-     * @param  Analyser|null  $analyser
+     * @param  Dom|null       $dom
      */
-    public function __construct(Config $config, InputInterface $input, Analyser $analyser = null);
+    public function __construct(Config $config, InputInterface $input, Dom $dom = null);
 
     /**
-     * Try's to find events using the provided config and analyser.
+     * Try's to find information using the provided config and analyser.
      *
-     * @return string
+     * @return array
      */
     public function execute();
 }

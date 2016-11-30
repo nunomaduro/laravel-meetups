@@ -11,7 +11,7 @@ class Config implements Contract
      *
      * @var string
      */
-    private $url = 'https://www.meetup.com/find/events';
+    private $url = 'https://www.meetup.com/find/events/';
 
     /**
      * The all meetups param.
@@ -38,17 +38,19 @@ class Config implements Contract
     private $radius = 25;
 
     /**
-     * All the elements to search by event.
+     * All catalog providers.
      *
      * @var array
      */
-    private $elements = [
-        'LaravelMeetups\Fields\Option',
-        'LaravelMeetups\Fields\Date',
-        'LaravelMeetups\Fields\Title',
-        'LaravelMeetups\Fields\Location',
-        'LaravelMeetups\Fields\Members',
-    ];
+    private $catalogProviders = ['LaravelMeetups\Providers\Catalog\Option', 'LaravelMeetups\Providers\Catalog\Date', 'LaravelMeetups\Providers\Catalog\Title', 'LaravelMeetups\Providers\Catalog\Location', 'LaravelMeetups\Providers\Catalog\Members',];
+
+    /**
+     * All detail providers.
+     *
+     * @var array
+     */
+    private $detailProviders = ['LaravelMeetups\Providers\Detail\Title', 'LaravelMeetups\Providers\Detail\Join',];
+
 
     /**
      * {@inheritdoc}
@@ -56,6 +58,16 @@ class Config implements Contract
     public function setRadius($radius)
     {
         $this->radius = $radius;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
 
         return $this;
     }
@@ -95,8 +107,16 @@ class Config implements Contract
     /**
      * {@inheritdoc}
      */
-    public function getElements()
+    public function getCatalogProviders()
     {
-        return $this->elements;
+        return $this->catalogProviders;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getDetailProviders()
+    {
+        return $this->detailProviders;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelMeetups\Jobs\Catalog;
+namespace LaravelMeetups\Jobs\Detail;
 
 use LaravelMeetups\Contracts\Jobs\Writer as Contract;
 use Symfony\Component\Console\Style\StyleInterface;
@@ -16,18 +16,11 @@ class Writer implements Contract
     private $config;
 
     /**
-     * Holds a instance of SymfonyStyle.
+     * Holds a instance of StyleInterface.
      *
-     * @var Config
+     * @var StyleInterface
      */
     private $io;
-
-    /**
-     * Holds the headers.
-     *
-     * @var Config
-     */
-    private $headers;
 
     /**
      * Holds the values.
@@ -43,7 +36,6 @@ class Writer implements Contract
     {
         $this->config = $config;
         $this->io = $io;
-        $this->setHeaders();
     }
 
     /**
@@ -51,7 +43,8 @@ class Writer implements Contract
      */
     public function write()
     {
-        $this->io->table($this->headers, $this->values);
+        $this->io->title(current($this->values));
+        $this->io->listing($this->values);
 
         return $this;
     }
@@ -62,21 +55,6 @@ class Writer implements Contract
     public function setValues(array $values)
     {
         $this->values = $values;
-
-        return $this;
-    }
-
-    /**
-     * Configures the table instance with
-     * the headers provided by the config list elements.
-     *
-     * @return $this
-     */
-    private function setHeaders()
-    {
-        $this->headers = array_map(function($elem) {
-            return (new $elem)->getName();
-        }, $this->config->getCatalogProviders());
 
         return $this;
     }
