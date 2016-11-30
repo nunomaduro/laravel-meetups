@@ -1,6 +1,8 @@
 <p align="center">
   <a href="https://travis-ci.org/nunomaduro/laravel-meetups"><img src="https://travis-ci.org/nunomaduro/laravel-meetups.svg?branch=master" alt="Build Status"></a>
-  <a href="https://codecov.io/github/nunomaduro/laravel-meetups?branch=master"><img src="https://img.shields.io/codecov/c/github/nunomaduro/laravel-meetups/dev.svg" alt="Coverage Status"></a>
+  <a href="https://codecov.io/gh/nunomaduro/laravel-meetups"><img src="https://codecov.io/gh/nunomaduro/laravel-meetups/branch/master/graph/badge.svg" alt="Coverage status" />
+</a>
+
 </p>
 
 ## Intro
