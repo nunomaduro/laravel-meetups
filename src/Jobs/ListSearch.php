@@ -2,6 +2,7 @@
 
 namespace LaravelMeetups\Jobs;
 
+use LaravelMeetups\Contracts\Jobs\Search as Contract;
 use Symfony\Component\Console\Input\InputInterface;
 use LaravelMeetups\Http\Client\Transporter;
 use LaravelMeetups\Http\Client\Strategy;
@@ -9,7 +10,7 @@ use LaravelMeetups\Http\Client\Query;
 use PHPHtmlParser\Dom as Analyser;
 use LaravelMeetups\Config;
 
-class Search
+class ListSearch implements Contract
 {
     /**
      * Holds a instance of config.
@@ -56,7 +57,7 @@ class Search
 
             return array_map(function ($elem) use ($analyser) {
                 return (new $elem)->find($analyser);
-            }, $this->config->getElements());
+            }, $this->config->getListFields());
 
         }, $this->getEvents());
     }

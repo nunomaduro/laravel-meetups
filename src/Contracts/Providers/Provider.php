@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelMeetups\Contracts\Fields;
+namespace LaravelMeetups\Contracts\Providers;
 
 use PHPHtmlParser\Dom;
 
-interface Field
+interface Provider
 {
     /**
      * @return string

@@ -5,7 +5,7 @@ namespace LaravelMeetups\Contracts\Jobs;
 use Symfony\Component\Console\Helper\Table;
 use LaravelMeetups\Contracts\Config;
 
-interface Write
+interface Writer
 {
     /**
      * Creates a new instance of the class.
