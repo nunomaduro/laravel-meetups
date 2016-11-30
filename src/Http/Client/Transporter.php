@@ -3,14 +3,14 @@
 namespace LaravelMeetups\Http\Client;
 
 use LaravelMeetups\Contracts\Http\Client\Transporter as Contract;
-use LaravelMeetups\Contracts\Http\Client\Query;
+use LaravelMeetups\Contracts\Http\Client\Query as QueryContract;
 
 class Transporter implements Contract
 {
     /**
      * {@inheritdoc}
      */
-    public function execute(Query $query)
+    public function execute(QueryContract $query)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $query->toString());
