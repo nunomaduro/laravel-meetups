@@ -5,10 +5,11 @@
   <a href="https://packagist.org/packages/nunomaduro/laravel-meetups"><img src="https://poser.pugx.org/nunomaduro/laravel-meetups/d/total.svg" alt="Total Downloads"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-meetups"><img src="https://poser.pugx.org/nunomaduro/laravel-meetups/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-meetups"><img src="https://poser.pugx.org/nunomaduro/laravel-meetups/license.svg" alt="License"></a>
-</a>
-
 </p>
 
+<p align="center">
+<img src="https://photos-1.dropbox.com/t/2/AABinT2eGy5OohifUCxGWXTkR5k0VE_zVy6xK9Sfc2g22Q/12/520643674/png/32x32/3/1480647600/0/2/Screenshot%202016-11-30%2000.26.57.png/EPTh3pUEGMUGIAIoAg/fwzf3knG90NQA9oLSz89ulrxJycwgcTXUmFPXT2TRFk?size_mode=3&dl=0&size=1600x1200" alt="Laravel Meetups" />
+</p>
 ## Intro
 
 Laravel Meetups is an MIT-licensed open source project. Its a project UNDER DEVELOMENT.
