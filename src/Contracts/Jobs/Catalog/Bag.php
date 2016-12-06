@@ -10,9 +10,9 @@ interface Bag
      * Bag constructor.
      *
      * @param Dom   $dom
-     * @param array $values
+     * @param array $rows
      */
-    public function __construct(Dom $dom, array $values);
+    public function __construct(Dom $dom, array $rows);
 
     /**
      * Returns the dom
@@ -22,9 +22,9 @@ interface Bag
     public function getDom();
 
     /**
-     * Returns the values.
+     * Returns the rows.
      *
      * @return array
      */
-    public function getValues();
+    public function getRows();
 }

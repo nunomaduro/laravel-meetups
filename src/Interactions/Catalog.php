@@ -56,10 +56,20 @@ class Catalog implements Contract
         $this->bags = (new Jobs\Catalog\Search($config, $input))->execute();
 
         $rows = array_map(function($bag) {
-            return $bag->getValues();
+            return $bag->getRows();
         }, $this->bags);
 
-        $this->catalogWriter = (new Jobs\Catalog\Writer($config, new SymfonyStyle($input, $output)))->setValues($rows);
+        $this->catalogWriter = (new Jobs\Catalog\Writer($config, new SymfonyStyle($input, $output)))->setRows($rows);
+    }
+
+    /**
+     * Checks if the catalog is empty.
+     *
+     * @return bool
+     */
+    public function isEmpty()
+    {
+        return empty($this->catalogWriter->getRows());
     }
 
     /**
@@ -78,11 +88,11 @@ class Catalog implements Contract
     public function displayDetail($rowKey)
     {
         if (isset($this->bags[$rowKey - 1])) {
-            $detailValues = (new Jobs\Detail\Search($this->config, $this->input, $this->bags[$rowKey - 1]
+            $rows = (new Jobs\Detail\Search($this->config, $this->input, $this->bags[$rowKey - 1]
                 ->getDom()))
                 ->execute();
             (new Jobs\Detail\Writer($this->config, new SymfonyStyle($this->input, $this->output)))
-                ->setValues($detailValues)
+                ->setRows($rows)
                 ->write();
         }
 

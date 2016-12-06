@@ -15,15 +15,15 @@ class Bag implements Contract
     /**
      * @var array
      */
-    private $values;
+    private $rows;
 
     /**
      * {@inheritdoc}
      */
-    public function __construct(Dom $dom, array $values)
+    public function __construct(Dom $dom, array $rows)
     {
         $this->dom = $dom;
-        $this->values = $values;
+        $this->rows = $rows;
     }
 
     /**
@@ -37,8 +37,8 @@ class Bag implements Contract
     /**
      * {@inheritdoc}
      */
-    public function getValues()
+    public function getRows()
     {
-        return $this->values;
+        return $this->rows;
     }
 }

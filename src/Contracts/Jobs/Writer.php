@@ -16,11 +16,18 @@ interface Writer
     public function __construct(Config $config, StyleInterface $io);
 
     /**
-     * Writes the values on the table.
+     * Writes the rows on the table.
      *
-     * @param array $values
+     * @param array $rows
      */
-    public function setValues(array $values);
+    public function setRows(array $rows);
+
+    /**
+     * Returns the rows of the table.
+     *
+     * @return array
+     */
+    public function getRows();
 
     /**
      * Writes on console

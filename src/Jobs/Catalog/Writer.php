@@ -30,11 +30,11 @@ class Writer implements Contract
     private $headers;
 
     /**
-     * Holds the values.
+     * Holds the rows.
      *
      * @var Config
      */
-    private $values;
+    private $rows;
 
     /**
      * {@inheritdoc}
@@ -51,7 +51,7 @@ class Writer implements Contract
      */
     public function write()
     {
-        $this->io->table($this->headers, $this->values);
+        $this->io->table($this->headers, $this->rows);
 
         return $this;
     }
@@ -59,11 +59,19 @@ class Writer implements Contract
     /**
      * {@inheritdoc}
      */
-    public function setValues(array $values)
+    public function setRows(array $rows)
     {
-        $this->values = $values;
+        $this->rows = $rows;
 
         return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getRows()
+    {
+        return $this->rows;
     }
 
     /**
