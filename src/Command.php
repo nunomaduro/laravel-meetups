@@ -35,7 +35,10 @@ class Command extends BaseCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln($this->getHelper('formatter')->formatSection('Laravel Meetups', 'Searching...'));
+        $output->writeln($this->getHelper('formatter')->formatSection(
+            ' Laravel Meetups ',
+            'Searching nearby meetups...'
+        ));
 
 
         $interaction = new Interactions\Catalog(($config = new Config), $input, $output);
@@ -61,11 +64,11 @@ class Command extends BaseCommand
     private function noMeetupsNearYou(ConfigContract $config, OutputInterface $output)
     {
         $radiusUsed = $config->getMaxRadius();
-        $output->writeln(
-            "<error>There is no meetups near you using an radius of: $radiusUsed miles.</error>");
 
-        $output->writeln(
-            "<comment>Try to use another max radius. Example LaravelMeetups 1000</comment>");
+        $output->writeln($this->getHelper('formatter')->formatSection(
+            " There is no nearby meetups within $radiusUsed miles ",
+            "<comment>Try to use another max radius. Example LaravelMeetups 1000</comment>"
+        ));
 
         return $this;
     }

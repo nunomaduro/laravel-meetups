@@ -15,10 +15,6 @@ class Search extends AbstractSearch implements Contract
      */
     public function execute()
     {
-        if ($maxRadius = $this->input->getArgument('max_radius')) {
-            $this->config->setMaxRadius($maxRadius);
-        }
-
         return array_map(function($event) {
             $dom = $this->dom->load($event->innerHtml);
 
