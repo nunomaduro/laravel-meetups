@@ -3,6 +3,8 @@
 namespace LaravelMeetups;
 
 use Symfony\Component\Console\Command\Command as BaseCommand;
+use LaravelMeetups\Contracts\Config as ConfigContract;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Question\Question;
@@ -18,7 +20,9 @@ class Command extends BaseCommand
      */
     protected function configure()
     {
-        $this->setName('laravel-meetups')->setDescription('Create a new Laravel meetup application');
+        $this->setName('laravel-meetups')
+            ->setDescription('Create a new Laravel meetup application')
+            ->addArgument('max_radius', InputArgument::OPTIONAL, 'What should be the max radius?');
     }
 
     /**
@@ -31,15 +35,38 @@ class Command extends BaseCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln($this->getHelper('formatter')->formatSection('Laravel Meetups', 'Bootstraping..'));
+        $output->writeln($this->getHelper('formatter')->formatSection('Laravel Meetups', 'Searching...'));
 
-        $interaction = new Interactions\Catalog(new Config, $input, $output);
+
+        $interaction = new Interactions\Catalog(($config = new Config), $input, $output);
 
         $key = null;
-        while (true) {
+        while (! $interaction->isEmpty() && $key !== 'exit') {
             $interaction->displayTable()->displayDetail($key);
             $output->writeln('<comment>Follow the author on twitter:<comment> <info>@enunomaduro</info> <info>✔</info>');
             $key = $this->getHelper('question')->ask($input, $output, new Question('Select a meetup:'));
         }
+
+        $interaction->isEmpty() and $this->noMeetupsNearYou($config, $output);
+    }
+
+    /**
+     * Displays the no meetups near you message.
+     *
+     * @param \LaravelMeetups\Contracts\Config                  $config
+     * @param \Symfony\Component\Console\Output\OutputInterface $output
+     *
+     * @return $this
+     */
+    private function noMeetupsNearYou(ConfigContract $config, OutputInterface $output)
+    {
+        $radiusUsed = $config->getMaxRadius();
+        $output->writeln(
+            "<error>There is no meetups near you using an radius of: $radiusUsed miles.</error>");
+
+        $output->writeln(
+            "<comment>Try to use another max radius. Example LaravelMeetups 1000</comment>");
+
+        return $this;
     }
 }

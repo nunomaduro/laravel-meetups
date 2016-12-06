@@ -31,7 +31,21 @@ class Config implements Contract
     private $keywords = 'Laravel';
 
     /**
-     * The radius param.
+     * The max radius param.
+     *
+     * @var int
+     */
+    private $maxRadius = 100;
+
+    /**
+     * The radius interval  param.
+     *
+     * @var int
+     */
+    private $radiusInterval = 100;
+
+    /**
+     * The radius  param.
      *
      * @var int
      */
@@ -58,6 +72,16 @@ class Config implements Contract
     public function setRadius($radius)
     {
         $this->radius = $radius;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setMaxRadius($maxRadius)
+    {
+        $this->maxRadius = $maxRadius;
 
         return $this;
     }
@@ -99,9 +123,25 @@ class Config implements Contract
     /**
      * {@inheritdoc}
      */
+    public function getMaxRadius()
+    {
+        return $this->maxRadius;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getRadius()
     {
         return $this->radius;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getRadiusInterval()
+    {
+        return $this->radiusInterval;
     }
 
     /**

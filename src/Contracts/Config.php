@@ -14,6 +14,16 @@ interface Config
     public function setRadius($radius);
 
     /**
+     * Sets the max radius.
+     *
+     * @param int $maxRadius
+     *
+     * @return $this
+     */
+    public function setMaxRadius($maxRadius);
+
+
+    /**
      * Sets the url.
      *
      * @param string $url
@@ -44,7 +54,21 @@ interface Config
     public function getKeywords();
 
     /**
-     * Returns the radius param.
+     * Returns the max radius param.
+     *
+     * @return int
+     */
+    public function getMaxRadius();
+
+    /**
+     * Returns the radius interval param.
+     *
+     * @return int
+     */
+    public function getRadiusInterval();
+
+    /**
+     * Returns the radius  param.
      *
      * @return int
      */

@@ -15,35 +15,36 @@ class Search extends AbstractSearch implements Contract
      */
     public function execute()
     {
+        if ($maxRadius = $this->input->getArgument('max_radius')) {
+            $this->config->setMaxRadius($maxRadius);
+        }
+
         return array_map(function($event) {
             $dom = $this->dom->load($event->innerHtml);
 
             return new Bag(clone $dom, array_map(function($elem) use ($dom) {
                 return (new $elem)->find($dom);
             }, $this->config->getCatalogProviders()));
-        }, $this->getEvents());
+        }, $this->getRows());
     }
 
     /**
-     * Returns the catalog of events.
+     * Returns the catalog in rows.
      *
-     * @todo   Rethink about this lazy implementation
      * @return array
      */
-    private function getEvents()
+    private function getRows()
     {
-        for ($i = 1; $i < 10; $i++) {
-            $this->config->setRadius($i * 100);
+        $radius = $this->config->getRadiusInterval();
+        $rows = [];
 
+        while ($radius < $this->config->getMaxRadius()) {
+            $this->config->setRadius($radius);
             $body = (new Transporter)->execute(new Query(new Strategy($this->config)));
-
-            $events = $this->dom->load($body)->getElementsByClass('event-listing-container-li');
-
-            if (count($events) > 10) {
-                return $events->toArray();
-            }
+            $rows = $this->dom->load($body)->getElementsByClass('event-listing-container-li') ?: [];
+            $radius += $this->config->getRadiusInterval();
         }
 
-        return [];
+        return is_array($rows) ? $rows : $rows->toArray();
     }
 }
