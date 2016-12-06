@@ -35,7 +35,7 @@ class Config implements Contract
      *
      * @var int
      */
-    private $maxRadius = 100;
+    private $maxRadius = 500;
 
     /**
      * The radius interval  param.
