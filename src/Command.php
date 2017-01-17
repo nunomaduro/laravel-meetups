@@ -20,6 +20,8 @@ class Command extends BaseCommand
      */
     protected function configure()
     {
+        date_default_timezone_set('UTC');
+        
         $this->setName('laravel-meetups')
             ->setDescription('Create a new Laravel meetup application')
             ->addArgument('max_radius', InputArgument::OPTIONAL, 'What should be the max radius?');
