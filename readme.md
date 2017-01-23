@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-<img src="https://photos-1.dropbox.com/t/2/AABinT2eGy5OohifUCxGWXTkR5k0VE_zVy6xK9Sfc2g22Q/12/520643674/png/32x32/3/1480647600/0/2/Screenshot%202016-11-30%2000.26.57.png/EPTh3pUEGMUGIAIoAg/fwzf3knG90NQA9oLSz89ulrxJycwgcTXUmFPXT2TRFk?size_mode=3&dl=0&size=1600x1200" alt="Laravel Meetups" />
+<img src="https://raw.githubusercontent.com/nunomaduro/laravel-meetups/master/docs/example.png" alt="Laravel Meetups" />
 </p>
 ## Intro
 
