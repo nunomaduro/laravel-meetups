@@ -1,14 +1,14 @@
 <p align="center">
-  <a href="https://travis-ci.org/nunomaduro/laravel-meetups"><img src="https://travis-ci.org/nunomaduro/laravel-meetups.svg?branch=master" alt="Build Status"></a>
-  <a href="https://codecov.io/gh/nunomaduro/laravel-meetups"><img src="https://codecov.io/gh/nunomaduro/laravel-meetups/branch/master/graph/badge.svg" alt="Coverage status" />
-  <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-meetups/?branch=master"><img src="https://scrutinizer-ci.com/g/nunomaduro/laravel-meetups/badges/quality-score.png?b=master" alt="Code Quality" />
+  <a href="https://travis-ci.org/nunomaduro/laravel-meetups"><img src="https://travis-ci.org/nunomaduro/laravel-meetups.svg?branch=stable" alt="Build Status"></a>
+  <a href="https://codecov.io/gh/nunomaduro/laravel-meetups"><img src="https://codecov.io/gh/nunomaduro/laravel-meetups/branch/stable/graph/badge.svg" alt="Coverage status" />
+  <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-meetups/?branch=stable"><img src="https://scrutinizer-ci.com/g/nunomaduro/laravel-meetups/badges/quality-score.png?b=stable" alt="Code Quality" />
   <a href="https://packagist.org/packages/nunomaduro/laravel-meetups"><img src="https://poser.pugx.org/nunomaduro/laravel-meetups/d/total.svg" alt="Total Downloads"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-meetups"><img src="https://poser.pugx.org/nunomaduro/laravel-meetups/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-meetups"><img src="https://poser.pugx.org/nunomaduro/laravel-meetups/license.svg" alt="License"></a>
 </p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/nunomaduro/laravel-meetups/master/docs/example.png" alt="Laravel Meetups" />
+    <img src="https://raw.githubusercontent.com/nunomaduro/laravel-meetups/stable/docs/example.png" alt="Laravel Meetups" />
 </p>
 ## Intro
 
