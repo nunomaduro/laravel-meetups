@@ -12,7 +12,7 @@
 </p>
 ## Intro
 
-Laravel Meetups is an MIT-licensed open source project. Its a project UNDER DEVELOMENT.
+Laravel Meetups is an MIT-licensed open source project.
 
 Features:
 
@@ -41,4 +41,4 @@ Execute in your console:
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-2016 Nuno Maduro
+Copyright (c) 2016-2017 Nuno Maduro
