@@ -14,8 +14,8 @@ class Strategy extends AbstractStrategy implements Contract
     {
         return [
             'allMeetups' => $this->config->getAllMeetups() ? 'true' : 'false',
-            'keywords' => $this->config->getKeywords(),
-            'radius' => $this->config->getRadius(),
+            'keywords'   => $this->config->getKeywords(),
+            'radius'     => $this->config->getRadius(),
         ];
     }
 }

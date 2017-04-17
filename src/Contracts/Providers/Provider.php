@@ -12,7 +12,7 @@ interface Provider
     public function getName();
 
     /**
-     * @param  Dom $dom
+     * @param Dom $dom
      *
      * @return string
      */

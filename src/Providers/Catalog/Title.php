@@ -33,7 +33,7 @@ class Title implements Contract
     private function truncate($title)
     {
         if (mb_strlen($title) > 22) {
-            return substr($title, 0, 20) . '..';
+            return substr($title, 0, 20).'..';
         }
 
         return $title;

@@ -2,13 +2,12 @@
 
 namespace LaravelMeetups\Interactions;
 
-use LaravelMeetups\Contracts\Interactions\Catalog as Contract;
-use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Style\SymfonyStyle;
 use LaravelMeetups\Contracts\Config;
+use LaravelMeetups\Contracts\Interactions\Catalog as Contract;
 use LaravelMeetups\Jobs;
-
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
 class Catalog implements Contract
 {
@@ -55,7 +54,7 @@ class Catalog implements Contract
         $this->output = $output;
         $this->bags = (new Jobs\Catalog\Search($config, $input))->execute();
 
-        $rows = array_map(function($bag) {
+        $rows = array_map(function ($bag) {
             return $bag->getRows();
         }, $this->bags);
 

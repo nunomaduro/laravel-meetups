@@ -15,7 +15,7 @@ interface Bag
     public function __construct(Dom $dom, array $rows);
 
     /**
-     * Returns the dom
+     * Returns the dom.
      *
      * @return Dom
      */

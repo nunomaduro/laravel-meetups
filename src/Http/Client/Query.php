@@ -29,8 +29,8 @@ class Query implements Contract
     {
         $stringQuery = $this->strategy->getUrl();
 
-        if (! empty($params = $this->strategy->getParams())) {
-            $stringQuery .= '?' . http_build_query($params);
+        if (!empty($params = $this->strategy->getParams())) {
+            $stringQuery .= '?'.http_build_query($params);
         }
 
         return $stringQuery;

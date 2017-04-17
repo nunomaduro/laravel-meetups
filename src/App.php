@@ -47,7 +47,7 @@ class App extends Application
      */
     private function getCommand()
     {
-        $this->command === null && $this->command = new Command;
+        $this->command === null && $this->command = new Command();
 
         return $this->command;
     }

@@ -30,7 +30,7 @@ interface Writer
     public function getRows();
 
     /**
-     * Writes on console
+     * Writes on console.
      *
      * @return $this
      */

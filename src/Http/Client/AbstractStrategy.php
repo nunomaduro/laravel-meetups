@@ -13,25 +13,16 @@ abstract class AbstractStrategy
      */
     protected $config;
 
-    /**
-     * {@inheritdoc}
-     */
     public function __construct(Config $config)
     {
         $this->config = $config;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getUrl()
     {
         return $this->config->getUrl();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getParams()
     {
         return [];

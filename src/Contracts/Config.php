@@ -22,7 +22,6 @@ interface Config
      */
     public function setMaxRadius($maxRadius);
 
-
     /**
      * Sets the url.
      *
@@ -42,7 +41,7 @@ interface Config
     /**
      * Returns the all meetups param.
      *
-     * @return boolean
+     * @return bool
      */
     public function getAllMeetups();
 

@@ -2,8 +2,8 @@
 
 namespace LaravelMeetups\Providers\Catalog;
 
-use PHPHtmlParser\Dom;
 use LaravelMeetups\Contracts\Providers\Provider as Contract;
+use PHPHtmlParser\Dom;
 
 class Date implements Contract
 {
@@ -28,6 +28,6 @@ class Date implements Contract
             $elem->getAttribute('data-day')
         )->format('Y-m-d');
 
-        return $date . ' ' . $dom->find('time')->text(true);
+        return $date.' '.$dom->find('time')->text(true);
     }
 }

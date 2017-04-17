@@ -8,7 +8,7 @@ use PHPHtmlParser\Dom;
 class Option implements Contract
 {
     /**
-     * Holds the current option number
+     * Holds the current option number.
      *
      * @var int
      */
@@ -27,6 +27,6 @@ class Option implements Contract
      */
     public function find(Dom $dom)
     {
-        return '[<info>' . static::$number++ . '</info>]';
+        return '[<info>'.static::$number++.'</info>]';
     }
 }
