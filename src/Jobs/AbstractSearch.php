@@ -2,9 +2,9 @@
 
 namespace LaravelMeetups\Jobs;
 
-use Symfony\Component\Console\Input\InputInterface;
 use LaravelMeetups\Contracts\Config;
 use PHPHtmlParser\Dom;
+use Symfony\Component\Console\Input\InputInterface;
 
 abstract class AbstractSearch
 {
@@ -29,13 +29,10 @@ abstract class AbstractSearch
      */
     protected $dom;
 
-    /**
-     * {@inheritdoc}
-     */
     public function __construct(Config $config, InputInterface $input, Dom $dom = null)
     {
         $this->config = $config;
         $this->input = $input;
-        $this->dom = $dom ?: new Dom;
+        $this->dom = $dom ?: new Dom();
     }
 }

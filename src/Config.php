@@ -56,15 +56,14 @@ class Config implements Contract
      *
      * @var array
      */
-    private $catalogProviders = ['LaravelMeetups\Providers\Catalog\Option', 'LaravelMeetups\Providers\Catalog\Date', 'LaravelMeetups\Providers\Catalog\Title', 'LaravelMeetups\Providers\Catalog\Location', 'LaravelMeetups\Providers\Catalog\Members',];
+    private $catalogProviders = ['LaravelMeetups\Providers\Catalog\Option', 'LaravelMeetups\Providers\Catalog\Date', 'LaravelMeetups\Providers\Catalog\Title', 'LaravelMeetups\Providers\Catalog\Location', 'LaravelMeetups\Providers\Catalog\Members'];
 
     /**
      * All detail providers.
      *
      * @var array
      */
-    private $detailProviders = ['LaravelMeetups\Providers\Detail\Title', 'LaravelMeetups\Providers\Detail\Join',];
-
+    private $detailProviders = ['LaravelMeetups\Providers\Detail\Title', 'LaravelMeetups\Providers\Detail\Join'];
 
     /**
      * {@inheritdoc}

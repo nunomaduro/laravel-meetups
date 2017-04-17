@@ -2,9 +2,9 @@
 
 namespace LaravelMeetups\Jobs\Detail;
 
+use LaravelMeetups\Contracts\Config;
 use LaravelMeetups\Contracts\Jobs\Writer as Contract;
 use Symfony\Component\Console\Style\StyleInterface;
-use LaravelMeetups\Contracts\Config;
 
 class Writer implements Contract
 {

@@ -2,9 +2,9 @@
 
 namespace LaravelMeetups\Jobs\Catalog;
 
+use LaravelMeetups\Contracts\Config;
 use LaravelMeetups\Contracts\Jobs\Writer as Contract;
 use Symfony\Component\Console\Style\StyleInterface;
-use LaravelMeetups\Contracts\Config;
 
 class Writer implements Contract
 {
@@ -82,8 +82,8 @@ class Writer implements Contract
      */
     private function setHeaders()
     {
-        $this->headers = array_map(function($elem) {
-            return (new $elem)->getName();
+        $this->headers = array_map(function ($elem) {
+            return (new $elem())->getName();
         }, $this->config->getCatalogProviders());
 
         return $this;
