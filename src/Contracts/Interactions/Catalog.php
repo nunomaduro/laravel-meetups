@@ -2,10 +2,9 @@
 
 namespace LaravelMeetups\Contracts\Interactions;
 
-use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Input\InputInterface;
 use LaravelMeetups\Contracts\Config;
-
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 
 interface Catalog
 {
@@ -25,7 +24,7 @@ interface Catalog
     public function displayTable();
 
     /**
-     * Displays the detail
+     * Displays the detail.
      *
      * @param $rowKey
      *

@@ -9,7 +9,7 @@ interface Strategy
     /**
      * Creates a new instance of the class.
      *
-     * @param  Config $config
+     * @param Config $config
      */
     public function __construct(Config $config);
 

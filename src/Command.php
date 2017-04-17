@@ -2,26 +2,25 @@
 
 namespace LaravelMeetups;
 
-use Symfony\Component\Console\Command\Command as BaseCommand;
 use LaravelMeetups\Contracts\Config as ConfigContract;
+use Symfony\Component\Console\Command\Command as BaseCommand;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
-
 
 class Command extends BaseCommand
 {
     /**
      * Configure the command options.
-     *a
+     *a.
      *
      * @return void
      */
     protected function configure()
     {
         date_default_timezone_set('UTC');
-        
+
         $this->setName('laravel-meetups')
             ->setDescription('Create a new Laravel meetup application')
             ->addArgument('max_radius', InputArgument::OPTIONAL, 'What should be the max radius?');
@@ -30,8 +29,8 @@ class Command extends BaseCommand
     /**
      * Execute the command.
      *
-     * @param  InputInterface  $input
-     * @param  OutputInterface $output
+     * @param InputInterface  $input
+     * @param OutputInterface $output
      *
      * @return void
      */
@@ -42,11 +41,10 @@ class Command extends BaseCommand
             'Searching nearby meetups...'
         ));
 
-
-        $interaction = new Interactions\Catalog(($config = new Config), $input, $output);
+        $interaction = new Interactions\Catalog(($config = new Config()), $input, $output);
 
         $key = null;
-        while (! $interaction->isEmpty() && $key !== 'exit') {
+        while (!$interaction->isEmpty() && $key !== 'exit') {
             $interaction->displayTable()->displayDetail($key);
             $output->writeln('<comment>Follow the author on twitter:<comment> <info>@enunomaduro</info> <info>✔</info>');
             $key = $this->getHelper('question')->ask($input, $output, new Question('Select a meetup:'));
@@ -69,7 +67,7 @@ class Command extends BaseCommand
 
         $output->writeln($this->getHelper('formatter')->formatSection(
             " There is no nearby meetups within $radiusUsed miles ",
-            "<comment>Try to use another max radius. Example LaravelMeetups 1000</comment>"
+            '<comment>Try to use another max radius. Example LaravelMeetups 1000</comment>'
         ));
 
         return $this;

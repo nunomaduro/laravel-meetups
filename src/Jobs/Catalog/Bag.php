@@ -2,7 +2,7 @@
 
 namespace LaravelMeetups\Jobs\Catalog;
 
-use \LaravelMeetups\Contracts\Jobs\Catalog\Bag as Contract;
+use LaravelMeetups\Contracts\Jobs\Catalog\Bag as Contract;
 use PHPHtmlParser\Dom;
 
 class Bag implements Contract

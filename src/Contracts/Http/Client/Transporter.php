@@ -9,7 +9,7 @@ interface Transporter
      *
      * Should retrieve information from an provider.
      *
-     * @param  Query $query
+     * @param Query $query
      *
      * @return string
      */

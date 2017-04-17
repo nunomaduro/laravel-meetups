@@ -2,8 +2,8 @@
 
 namespace LaravelMeetups\Http\Client;
 
-use LaravelMeetups\Contracts\Http\Client\Transporter as Contract;
 use LaravelMeetups\Contracts\Http\Client\Query as QueryContract;
+use LaravelMeetups\Contracts\Http\Client\Transporter as Contract;
 
 class Transporter implements Contract
 {
@@ -17,6 +17,7 @@ class Transporter implements Contract
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $response = curl_exec($ch);
         curl_close($ch);
+
         return $response;
     }
 }
