@@ -35,7 +35,7 @@ Execute in your console:
 
 ## Stay In Touch
 
-- For latest releases and announcements, follow on Twitter: [@enunomaduro](https://twitter.com/enunomaduro)
+For latest releases and announcements, follow on Twitter: [@enunomaduro](https://twitter.com/enunomaduro)
 
 ## License
 
