@@ -18,9 +18,7 @@ use LaravelMeetups\Http\Client\Transporter;
 use LaravelMeetups\Jobs\AbstractSearch;
 
 /**
- * Class Search
- *
- * @package LaravelMeetups\Jobs\Catalog
+ * Class Search.
  */
 class Search extends AbstractSearch implements Contract
 {

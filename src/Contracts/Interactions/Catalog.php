@@ -16,9 +16,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Interface Catalog
- *
- * @package LaravelMeetups\Contracts\Interactions
+ * Interface Catalog.
  */
 interface Catalog
 {

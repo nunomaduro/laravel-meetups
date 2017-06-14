@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Config;
 use Symfony\Component\Console\Style\StyleInterface;
 
 /**
- * Interface Writer
- *
- * @package LaravelMeetups\Contracts\Jobs
+ * Interface Writer.
  */
 interface Writer
 {

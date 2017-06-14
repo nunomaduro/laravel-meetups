@@ -14,9 +14,7 @@ namespace LaravelMeetups\Contracts\Http\Client;
 use LaravelMeetups\Contracts\Config;
 
 /**
- * Interface Strategy
- *
- * @package LaravelMeetups\Contracts\Http\Client
+ * Interface Strategy.
  */
 interface Strategy
 {

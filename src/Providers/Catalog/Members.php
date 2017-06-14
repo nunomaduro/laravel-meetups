@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Providers\Provider as Contract;
 use PHPHtmlParser\Dom;
 
 /**
- * Class Members
- *
- * @package LaravelMeetups\Providers\Catalog
+ * Class Members.
  */
 class Members implements Contract
 {
@@ -34,6 +32,6 @@ class Members implements Contract
      */
     public function find(Dom $dom)
     {
-        return (int)$dom->getElementsByClass('attendee-count')->text(true);
+        return (int) $dom->getElementsByClass('attendee-count')->text(true);
     }
 }

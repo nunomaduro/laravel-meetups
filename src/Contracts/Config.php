@@ -12,9 +12,7 @@
 namespace LaravelMeetups\Contracts;
 
 /**
- * Interface Config
- *
- * @package LaravelMeetups\Contracts
+ * Interface Config.
  */
 interface Config
 {

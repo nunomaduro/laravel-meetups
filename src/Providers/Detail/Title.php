@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Providers\Provider as Contract;
 use PHPHtmlParser\Dom;
 
 /**
- * Class Title
- *
- * @package LaravelMeetups\Providers\Detail
+ * Class Title.
  */
 class Title implements Contract
 {

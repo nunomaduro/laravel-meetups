@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Jobs\Catalog\Bag as Contract;
 use PHPHtmlParser\Dom;
 
 /**
- * Class Bag
- *
- * @package LaravelMeetups\Jobs\Catalog
+ * Class Bag.
  */
 class Bag implements Contract
 {

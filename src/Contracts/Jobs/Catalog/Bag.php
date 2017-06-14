@@ -14,9 +14,7 @@ namespace LaravelMeetups\Contracts\Jobs\Catalog;
 use PHPHtmlParser\Dom;
 
 /**
- * Interface Bag
- *
- * @package LaravelMeetups\Contracts\Jobs\Catalog
+ * Interface Bag.
  */
 interface Bag
 {

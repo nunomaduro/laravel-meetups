@@ -16,9 +16,7 @@ use LaravelMeetups\Contracts\Jobs\Writer as Contract;
 use Symfony\Component\Console\Style\StyleInterface;
 
 /**
- * Class Writer
- *
- * @package LaravelMeetups\Jobs\Catalog
+ * Class Writer.
  */
 class Writer implements Contract
 {

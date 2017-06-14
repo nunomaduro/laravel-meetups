@@ -14,9 +14,7 @@ namespace LaravelMeetups\Contracts\Providers;
 use PHPHtmlParser\Dom;
 
 /**
- * Interface Provider
- *
- * @package LaravelMeetups\Contracts\Providers
+ * Interface Provider.
  */
 interface Provider
 {

@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Http\Client\Strategy as Contract;
 use LaravelMeetups\Http\Client\AbstractStrategy;
 
 /**
- * Class Strategy
- *
- * @package LaravelMeetups\Http\Client\Detail
+ * Class Strategy.
  */
 class Strategy extends AbstractStrategy implements Contract
 {

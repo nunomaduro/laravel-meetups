@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Providers\Provider as Contract;
 use PHPHtmlParser\Dom;
 
 /**
- * Class Join
- *
- * @package LaravelMeetups\Providers\Detail
+ * Class Join.
  */
 class Join implements Contract
 {

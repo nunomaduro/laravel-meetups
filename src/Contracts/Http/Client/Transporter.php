@@ -12,9 +12,7 @@
 namespace LaravelMeetups\Contracts\Http\Client;
 
 /**
- * Interface Transporter
- *
- * @package LaravelMeetups\Contracts\Http\Client
+ * Interface Transporter.
  */
 interface Transporter
 {

@@ -15,9 +15,7 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\InputInterface;
 
 /**
- * Class App
- *
- * @package LaravelMeetups
+ * Class App.
  */
 class App extends Application
 {

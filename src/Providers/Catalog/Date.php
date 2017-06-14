@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Providers\Provider as Contract;
 use PHPHtmlParser\Dom;
 
 /**
- * Class Date
- *
- * @package LaravelMeetups\Providers\Catalog
+ * Class Date.
  */
 class Date implements Contract
 {
@@ -42,6 +40,6 @@ class Date implements Contract
             $elem->getAttribute('data-day')
         )->format('Y-m-d');
 
-        return $date . ' ' . $dom->find('time')->text(true);
+        return $date.' '.$dom->find('time')->text(true);
     }
 }

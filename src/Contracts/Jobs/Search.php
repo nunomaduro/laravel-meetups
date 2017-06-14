@@ -16,9 +16,7 @@ use PHPHtmlParser\Dom;
 use Symfony\Component\Console\Input\InputInterface;
 
 /**
- * Interface Search
- *
- * @package LaravelMeetups\Contracts\Jobs
+ * Interface Search.
  */
 interface Search
 {

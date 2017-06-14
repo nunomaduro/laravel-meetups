@@ -12,9 +12,7 @@
 namespace LaravelMeetups\Contracts\Http\Client;
 
 /**
- * Interface Query
- *
- * @package LaravelMeetups\Contracts\Http\Client
+ * Interface Query.
  */
 interface Query
 {
