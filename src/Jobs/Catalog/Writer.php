@@ -1,11 +1,25 @@
 <?php
 
+/**
+ * This file is part of Laravel Meetups.
+ *
+ * (c) Nuno Maduro <enunomaduro@gmail.com>
+ *
+ *  For the full copyright and license information, please view the LICENSE
+ *  file that was distributed with this source code.
+ */
+
 namespace LaravelMeetups\Jobs\Catalog;
 
 use LaravelMeetups\Contracts\Config;
 use LaravelMeetups\Contracts\Jobs\Writer as Contract;
 use Symfony\Component\Console\Style\StyleInterface;
 
+/**
+ * Class Writer
+ *
+ * @package LaravelMeetups\Jobs\Catalog
+ */
 class Writer implements Contract
 {
     /**

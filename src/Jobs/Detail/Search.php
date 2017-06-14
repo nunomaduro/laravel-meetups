@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of Laravel Meetups.
+ *
+ * (c) Nuno Maduro <enunomaduro@gmail.com>
+ *
+ *  For the full copyright and license information, please view the LICENSE
+ *  file that was distributed with this source code.
+ */
+
 namespace LaravelMeetups\Jobs\Detail;
 
 use LaravelMeetups\Contracts\Jobs\Search as Contract;
@@ -8,6 +17,11 @@ use LaravelMeetups\Http\Client\Query;
 use LaravelMeetups\Http\Client\Transporter;
 use LaravelMeetups\Jobs\AbstractSearch;
 
+/**
+ * Class Search
+ *
+ * @package LaravelMeetups\Jobs\Detail
+ */
 class Search extends AbstractSearch implements Contract
 {
     /**
