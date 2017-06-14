@@ -16,9 +16,7 @@ use PHPHtmlParser\Dom;
 use Symfony\Component\Console\Input\InputInterface;
 
 /**
- * Class AbstractSearch
- *
- * @package LaravelMeetups\Jobs
+ * Class AbstractSearch.
  */
 abstract class AbstractSearch
 {

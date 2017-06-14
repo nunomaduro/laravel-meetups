@@ -19,9 +19,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
- * Class Catalog
- *
- * @package LaravelMeetups\Interactions
+ * Class Catalog.
  */
 class Catalog implements Contract
 {

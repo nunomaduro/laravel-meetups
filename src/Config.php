@@ -14,9 +14,7 @@ namespace LaravelMeetups;
 use LaravelMeetups\Contracts\Config as Contract;
 
 /**
- * Class Config
- *
- * @package LaravelMeetups
+ * Class Config.
  */
 class Config implements Contract
 {

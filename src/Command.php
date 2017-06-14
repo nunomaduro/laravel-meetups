@@ -19,9 +19,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 
 /**
- * Class Command
- *
- * @package LaravelMeetups
+ * Class Command.
  */
 class Command extends BaseCommand
 {

@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Http\Client\Strategy as Contract;
 use LaravelMeetups\Http\Client\AbstractStrategy;
 
 /**
- * Class Strategy
- *
- * @package LaravelMeetups\Http\Client\Catalog
+ * Class Strategy.
  */
 class Strategy extends AbstractStrategy implements Contract
 {
@@ -28,8 +26,8 @@ class Strategy extends AbstractStrategy implements Contract
     {
         return [
             'allMeetups' => $this->config->getAllMeetups() ? 'true' : 'false',
-            'keywords' => $this->config->getKeywords(),
-            'radius' => $this->config->getRadius(),
+            'keywords'   => $this->config->getKeywords(),
+            'radius'     => $this->config->getRadius(),
         ];
     }
 }

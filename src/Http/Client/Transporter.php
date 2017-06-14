@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Http\Client\Query as QueryContract;
 use LaravelMeetups\Contracts\Http\Client\Transporter as Contract;
 
 /**
- * Class Transporter
- *
- * @package LaravelMeetups\Http\Client
+ * Class Transporter.
  */
 class Transporter implements Contract
 {

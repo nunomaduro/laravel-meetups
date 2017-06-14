@@ -14,9 +14,7 @@ namespace LaravelMeetups\Http\Client;
 use LaravelMeetups\Contracts\Config;
 
 /**
- * Class AbstractStrategy
- *
- * @package LaravelMeetups\Http\Client
+ * Class AbstractStrategy.
  */
 abstract class AbstractStrategy
 {

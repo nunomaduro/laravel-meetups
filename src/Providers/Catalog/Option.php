@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Providers\Provider as Contract;
 use PHPHtmlParser\Dom;
 
 /**
- * Class Option
- *
- * @package LaravelMeetups\Providers\Catalog
+ * Class Option.
  */
 class Option implements Contract
 {
@@ -41,6 +39,6 @@ class Option implements Contract
      */
     public function find(Dom $dom)
     {
-        return '[<info>' . static::$number++ . '</info>]';
+        return '[<info>'.static::$number++.'</info>]';
     }
 }

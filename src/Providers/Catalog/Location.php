@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Providers\Provider as Contract;
 use PHPHtmlParser\Dom;
 
 /**
- * Class Location
- *
- * @package LaravelMeetups\Providers\Catalog
+ * Class Location.
  */
 class Location implements Contract
 {

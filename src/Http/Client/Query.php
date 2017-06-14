@@ -15,9 +15,7 @@ use LaravelMeetups\Contracts\Http\Client\Query as Contract;
 use LaravelMeetups\Contracts\Http\Client\Strategy;
 
 /**
- * Class Query
- *
- * @package LaravelMeetups\Http\Client
+ * Class Query.
  */
 class Query implements Contract
 {
