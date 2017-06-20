@@ -1,37 +1,39 @@
 <p align="center">
-  <a href="https://travis-ci.org/nunomaduro/laravel-meetups"><img src="https://travis-ci.org/nunomaduro/laravel-meetups.svg?branch=stable" alt="Build Status"></a>
-  <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-meetups/?branch=stable"><img src="https://scrutinizer-ci.com/g/nunomaduro/laravel-meetups/badges/quality-score.png?b=stable" alt="Code Quality" />
-  <a href="https://packagist.org/packages/nunomaduro/laravel-meetups"><img src="https://poser.pugx.org/nunomaduro/laravel-meetups/d/total.svg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/nunomaduro/laravel-meetups"><img src="https://poser.pugx.org/nunomaduro/laravel-meetups/v/stable.svg" alt="Latest Stable Version"></a>
-  <a href="https://packagist.org/packages/nunomaduro/laravel-meetups"><img src="https://poser.pugx.org/nunomaduro/laravel-meetups/license.svg" alt="License"></a>
-</p>
-
-<p align="center">
     <img src="https://raw.githubusercontent.com/nunomaduro/laravel-meetups/stable/docs/example.png" alt="Laravel Meetups" />
 </p>
 
-## Intro
+Laravel Meetups
+================
 
-Laravel Meetups is an MIT-licensed open source project.
+Laravel Meetups was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a console application that finds [Laravel](http://laravel.com) Meetups near you. Feel free to check out the [change log](CHANGELOG.md), [releases](nunomaduro/laravel-meetups/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
-Features:
+<p align="center">
+    <a href="https://styleci.io/repos/74613156"><img src="https://styleci.io/repos/74613156/shield" alt="StyleCI Status"></img></a>
+    <a href="https://travis-ci.org/nunomaduro/laravel-meetups"><img src="https://img.shields.io/travis/nunomaduro/laravel-meetups/stable.svg?style=flat-square" alt="Build Status"></img></a>
+    <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-meetups"><img src="https://img.shields.io/scrutinizer/g/nunomaduro/laravel-meetups.svg?style=flat-square" alt="Quality Score"></img></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
+    <a href="https://github.com/nunomaduro/laravel-meetups/releases"><img src="https://img.shields.io/github/release/nunomaduro/laravel-meetups.svg?style=flat-square" alt="Latest Version"></img></a>
+</p>
 
-- Table with near Laravel Meetups.
-- Allows check details about Laravel Meetups.
+## Installation
 
-### Installation
+[PHP](https://php.net) 5.5+
 
-Make sure you have composer installed globally.
+To get the latest version of Laravel Desktop Notifier, simply require the project using [Composer](https://getcomposer.org):
 
-Execute in your console:
+```bash
+$ composer global require nunomaduro/laravel-meetups
+```
 
-    composer global require nunomaduro/laravel-meetups
+## Usage in console
 
-### Check laravel meetups
-
-Execute in your console:
-
+```bash
     laravel-meetups
+```
+
+## Git branching model
+
+The git branching model used for development is the one described and assisted by `twgit` tool: [https://github.com/Twenga/twgit](https://github.com/Twenga/twgit).
 
 ## Stay In Touch
 
@@ -39,6 +41,6 @@ For latest releases and announcements, follow on Twitter: [@enunomaduro](https:/
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+The Laravel Desktop Notifier is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 Copyright (c) 2016-2017 Nuno Maduro
